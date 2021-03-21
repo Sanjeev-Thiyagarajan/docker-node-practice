@@ -47,6 +47,7 @@ const connectWithRetry = () => {
 
 connectWithRetry();
 
+app.enable("trust proxy");
 app.use(cors({}));
 
 app.use(
@@ -59,14 +60,13 @@ app.use(
       saveUninitialized: false,
       httpOnly: true,
       maxAge: 30000,
-      // domain: "6a09abe29b9a.ngrok.io",
-      sameSite: false,
     },
   })
 );
 app.use(express.json());
 
 app.use((req, res, next) => {
+  console.log("ran");
   next();
 });
 
