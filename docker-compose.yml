@@ -11,6 +11,7 @@ services:
       - node-app
   node-app:
     build: .
+    image: sloppynetworks/node-app-practice
     # ports:
     #   - "3000:3000"
     environment:
