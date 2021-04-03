@@ -18,7 +18,7 @@ exports.signUp = async (req, res) => {
     console.log(req.session);
 
     res.status(201).json({
-      status: "success",
+      status: "success yeaahha",
       data: {
         user: newUser,
       },
@@ -41,7 +41,7 @@ exports.login = async (req, res) => {
         console.log("is correct");
         req.session.user = user;
         res.status(200).json({
-          status: "success",
+          status: "success waggas sdfsdfaaaaa",
         });
       } else {
         res.status(400).json({
